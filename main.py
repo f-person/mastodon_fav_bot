@@ -13,7 +13,8 @@ while True:
     # Iterate through toots in timeline and fav them
     for toot in timeline:
         api.status_favourite(toot['id'])
-
-    min_id = timeline[0]['id']
+    
+    if len(timeline) > 0:
+        min_id = timeline[0]['id']
 
     time.sleep(30)
